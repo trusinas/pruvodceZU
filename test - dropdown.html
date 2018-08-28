@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+            .hide{
+                    display: none;
+                }
+    </style>
+         
+    
+</head>
+<body>
+            
+        <div id="rightside">
+                <div class="story">
+                    <h3>Story 1</h3>
+                    <p class="news hide"> 
+                        <em>Headlines (Story 1!)</em> This is story1 news.
+                    </p>
+                </div>
+        
+                <div class="story">
+                    <h3>Story 2</h3>
+                    <p class="news hide"> 
+                        <em>Headlines (Story 2!)</em> This is story2 news.
+                    </p>
+                </div>
+            </div>
+        <script>
+        stories = document.getElementsByClassName('story');     
+            for (var i = 0; i < stories.length; i++) {              // for each story
+                stories[i].addEventListener("click", function () {  // add an onClick listener
+                    news = this.getElementsByClassName('news');     
+                    for (var j = 0; j < news.length; j++) {         // for each news in story
+                        news[j].classList.toggle('hide');           // toggle 'hide' on clicked
+                    }
+                });
+            }
+        </script>
+</body>
+</html>

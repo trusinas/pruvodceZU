@@ -1,0 +1,227 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <meta charset="UTF-8"> 
+    
+    <script>
+
+	        // ZAHR.
+                function setupVisibility1(radioValue) {
+            if (radioValue == "zahrNe") { // kdyz je vybrana hodnota uteryNe -> najdi a zobraz s id = "zahrNeId", uteryAnoId shovej
+                $("#zahrNeId").show()
+                $("#zahrAnoId").hide()
+            } else {
+                $("#zahrNeId").hide()
+                $("#zahrAnoId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="zahr"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "zahr", proved nasledujici blok kodu
+
+                value1 = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility1(value1);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedvalue1 = $('input:radio[name="zahr"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility1(selectedvalue1);  // zobraz prislusnou defaultni sekci 
+
+        });
+
+            // AUTO
+                function setupVisibility2(radioValue) {
+            if (radioValue == "autoNe") { // kdyz je vybrana hodnota uteryNe -> najdi a zobraz s id = "autoNeId", uteryAnoId shovej
+                $("#autoNeId").show()
+                $("#autoAnoId").hide()
+            } else {
+                $("#autoNeId").hide()
+                $("#autoAnoId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="auto"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "auto", proved nasledujici blok kodu
+
+                value2 = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility2(value2);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedvalue2 = $('input:radio[name="auto"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility2(selectedvalue2);  // zobraz prislusnou defaultni sekci 
+
+        });
+            // DŮCHOD
+                function setupVisibility3(radioValue) {
+            if (radioValue == "duchodNe") { // kdyz je vybrana hodnota uteryNe -> najdi a zobraz s id = "duchodNeId", uteryAnoId shovej
+                $("#duchodNeId").show()
+                $("#duchodAnoId").hide()
+            } else {
+                $("#duchodNeId").hide()
+                $("#duchodAnoId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="duchod"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "duchod", proved nasledujici blok kodu
+
+                value3 = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility3(value3);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedvalue3 = $('input:radio[name="duchod"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility3(selectedvalue3);  // zobraz prislusnou defaultni sekci 
+
+        });
+            // DÁVKA
+                function setupVisibility4(radioValue) {
+            if (radioValue == "davkaNe") { // kdyz je vybrana hodnota uteryNe -> najdi a zobraz s id = "davkaNeId", uteryAnoId shovej
+                $("#davkaNeId").show()
+                $("#davkaAnoId").hide()
+            } else {
+                $("#davkaNeId").hide()
+                $("#davkaAnoId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="davka"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "davka", proved nasledujici blok kodu
+
+                value4 = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility4(value4);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedvalue4 = $('input:radio[name="davka"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility4(selectedvalue4);  // zobraz prislusnou defaultni sekci 
+
+        });
+            // PES
+                function setupVisibility5(radioValue) {
+            if (radioValue == "pesNe") { // kdyz je vybrana hodnota uteryNe -> najdi a zobraz s id = "pesNeId", uteryAnoId shovej
+                $("#pesNeId").show()
+                $("#pesAnoId").hide()
+            } else {
+                $("#pesNeId").hide()
+                $("#pesAnoId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="pes"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "pes", proved nasledujici blok kodu
+
+                value5 = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility5(value5);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedvalue5 = $('input:radio[name="pes"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility5(selectedvalue5);  // zobraz prislusnou defaultni sekci 
+
+        });           
+
+    </script>
+</head>
+
+<body>
+        <H1>Životní událost změna trvalého pobytu</H1>
+    Stěhujete se do jiného města? Měníte tudíž místo trvalého pobytu? V následujícím průvodci se Vám pokusíme dodat nejdůležitější informace, co, kde a jak musíte nebo byste měli zařídit.
+Abychom Vám nabídli co nejpřesnější rady, potřebujeme se v úvodu doptat na Vaši konkrétní situaci.
+            
+<H2>Dotazník pro personalizované řešení životní události změna trvalého pobytu</H2>
+Stěhujete se z ČR do zahraničí?
+<form action="">
+    <input type="radio" name="zahr" value="zahrAno" checked="checked">Ano, stěhuji se z ČR do zahraničí.<br>
+    <input type="radio" name="zahr" value="zahrNe">Ne, stěhuji se v rámci ČR.<br>
+</form>
+<br>
+
+Vlastníte auto?
+    <form action="">
+        <input type="radio" name="auto" value="autoAno" checked="checked">Ano, vlastním auto.<br>
+        <input type="radio" name="auto" value="autoNe">Ne, nevlastním auto.<br>
+    </form>
+    <br>
+
+Pobíráte nějaký důchod nebo jste OSVČ?
+    <form action="">
+        <input type="radio" name="duchod" value="duchodAno" checked="checked">Ano, pobírám důchod (starobní, invalidní, vdovský/vdovecký nebo sirotčí) nebo jsem OSVČ a platím si pojistné sám/sama.<br>
+        <input type="radio" name="duchod" value="duchodNe">Ne, nepobírám žádný důchod a pojistné za mě hradí zaměstnavatel.<br>
+    </form>
+    <br>
+
+Čerpáte nějakou nepojistnou sociální dávku, dávku pěstounské péče či dávku v oblasti (ne)zaměstnanosti?
+    <form action="">
+        <input type="radio" name="davka" value="davkaAno" checked="checked">Ano, čerpám některou z výše uvedených sociálních dávek.<br>
+        <input type="radio" name="davka" value="davkaNe">Ne, nečerpám žádnou z výše uvedených sociálních dávek.<br>
+    </form>
+    <br>
+
+Máte psa?
+    <form action="">
+        <input type="radio" name="pes" value="pesAno" checked="checked">Ano, mám psa.<br>
+        <input type="radio" name="pes" value="pesNe">Ne, nemám psa.<br>
+    </form>
+    <br>
+
+<H1>Personalizované řešení životní události stěhování</H1>
+<p id="zahrAnoId">Musíte na úřadu (ohlašovně) v místě trvalého pobytu, případně na zastupitelském úřadu <a href="data\tp.html">zrušit svůj trvalý pobyt v ČR</a> a do 15 dní <a href="data\odevzdat_op.html">odevzdat občanský průkaz</a> na úřadu, který jej vydal (obec s rozšířenou působností či městská část), nebo na matričním úřadu v místě trvalého pobytu.</p>
+
+<p id="zahrNeId">Musíte na úřadu (ohlašovně) v místě nového trvalého pobytu <a href="data\nahlaseni_tp.html">nahlásit změnu svého trvalého pobytu</a> a do 15 dní si zažádat o <a href="data\obcanka.html">nový občanský průkaz</a> na jakémkoli úřadu (obce s rozšířenou působností, městské části, případně přímo na <a href="data\mv.html">Ministerstvu vnitra</a> pokud byste potřebovali nový doklad už do druhého dne).</p>          
+
+
+<p id="autoAnoId">Musíte do 10 dní <a href="data\rv.html">nahlásit změnu údajů do registru vozidel</a> na jakémkoliv úřadu s rozšířenou působností, zde Vám bude také vyměněn malý technický průkaz a změněny údaje ve velkém technickém průkazu.</p>
+
+<p id="autoNeId"></p>
+
+<p id="duchodAnoId">Musíte nahlásit změnu trvalého pobytu ČSSZ. Pokud pobíráte důchod, můžete změnu nahlásit buď dopisem, e-mailem podepsaným uznávaným elektronickým podpisem nebo prostřednictvím datové schránky. Na <a href="https://www.cssz.cz/NR/rdonlyres/891121IIQ20154ee7agqbofbtmcvapbfcardmcrklkihsconp.pdf">webu ČSSZ</a> a na <a href="https://eportal.cssz.cz/web/portal/tiskopisy-zmvd">ePortálu ČSSZ</a> naleznete tiskopis nazvaný „Hlášení změny adresy nebo jména a příjmení“.</p>
+
+<p id="duchodNeId"></p>
+
+<p id="davkaAnoId">Musíte do 8 dní nahlásit novou adresu na Úřad práce.</p>
+
+<p id="davkaNeId"></p>
+
+<p id="pesAnoId">Zjistěte si, zda je ve Vaší nové obci povinnost platit poplatek za psa, kolik a jak a kde se případně tento poplatek platí. Každá obec má toto nastavené jinak.</p>
+
+<p id="pesNeId"></p>
+
+<p>Do 30 dní musíte nahlásit svou novou adresu i Vaší pojišťovně. Některé pojišťovny vyžadují osobní vyřízení, někde postačí písemné oznámení, každá pojišťovna má vlastní pravidla.</p>
+
+<p>Do 15 dní musíte oznámit Vaší staré obci, že se stěhujete a že se tudíž odhlašujete od platby za komunální odpad. Zároveň na nové obci se musíte k platbě za komunální odpad přihlásit, pokud to za Vás neudělá Společenství vlastníků jednotek, se kterým je vhodné se na tom samozřejmě domluvit.</p>
+
+<h2>Následují další velice užitečné rady, co vše by si měl člověk zkontrolovat, zařídit a kam všude by případně měl nebo mohl nahlásit změnu trvalého pobytu.</h2>
+-	finanční instituce<br>
+-	parkovací karty (odhlásit x přihlásit)<br>
+-	lékař<br>
+-	SIPO<br>
+-	koncesionářské poplatky<br>
+-	vyplácení důchodu přes Českou poštu<br>
+-	přeposílání korespondence<br>
+-	doprava<br>
+-	knihovna<br>
+-	povinné ručení<br>
+-	zaměstnavatel<br>
+-	škola<br>
+-	dodavatelé elektřiny, plynu, vody<br>
+-	poskytovatelé telefonních služeb, internetového připojení a TV<br>
+-	věrnostní slevové kartičky, účty v e-shopech<br>
+-	<a href="data\dite.html">stěhování jednoho z rodičů s dítětem</a>
+    
+</body>
+
+</html>

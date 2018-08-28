@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    <meta charset="UTF-8">
+    <script>
+
+	// zobraz prislusnou sekci na zaklade vybraneho radio buttonu
+    function setupVisibility(radioValue) {
+            if (radioValue == "1den") {
+                $("#1denId").show()
+                $("#5dnuId").hide()
+                $("#30dnuId").hide()
+            } else if (radioValue == "5dnu") {
+                $("#1denId").hide()
+                $("#5dnuId").show()
+                $("#30dnuId").hide()
+            } else {
+                $("#1denId").hide()
+                $("#5dnuId").hide()
+                $("#30dnuId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="vyber"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "pocity", proved nasledujici blok kodu
+
+                value = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility(value);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedValue = $('input:radio[name="vyber"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility(selectedValue);  // zobraz prislusnou defaultni sekci 
+
+        });     
+
+    
+        
+
+    </script>
+</head>
+
+<body>
+<H1>Vydání občanského průkazu</H1>
+    <H3>Upřednostňujete termín vyřízení, nebo je pro Vás důležitá cena?</H3>
+    <form action="">
+        <input type="radio" name="vyber" value="1den" checked="checked">Zaplatím 1000Kč, abych nový OP dostal za 24 hodin.<br>
+        <input type="radio" name="vyber" value="5dnu">Zaplatím 500Kč a počkám si 5 dnů.<br>
+        <input type="radio" name="vyber" value="30dnu">Na vydání OP si počkám 30 dní, ale nic nezaplatím.<br>
+    </form>
+    <br>
+
+    
+    <H2>Informace k podání žádosti o nový OP</H2>
+
+    <p id="1denId">O vydání OP ve zkrácené lhůtě 24 hodin můžete požádat na kterémkoli úřadě obce s rozšířenou působností, úřadu MČ v Praze anebo na MV. Pokud se nejedná o Váš první OP, nemusíte s sebou nic brát. Žádost Vám vytiskne úředník a taktéž Vás vyfotí. Vyzvednout OP musíte na MV.<br>
+    Budovu ministerstva najdete na Praze 4, Na Pankráci.  Přesná adresa je následující: Na Pankráci 72, Praha 4 (metro C - stanice „Pražského povstání“)<br>
+    <img alt="Vyzvednutí dokladů na Ministerstvu vnitra" src="	https://img.assets-finance-media.cz/data/newsimg/storage/ministerstvo-vnitra-mapa.png" style="width: 773px; height: 568px;" title="Vyzvednutí dokladů na Ministerstvu vnitra"><br><b>Otevírací doba</b><br>Pondělí: 8.00 – 17.00 hod.<br>Úterý: 8.00 – 16.00 hod.<br>Středa: 8.00 – 17.00 hod.<br>Čtvrtek: 8.00 – 16.00 hod.<br>Pátek: 8.00 – 15.00 hod.</p>
+
+    <p id="5dnuId">O nový OP můžete zažádat na kterémkoli úřadu obce s rozšířenou působností (v Praze na úřadech jednotlivých městských částí). V rámci žádosti také můžete uvést, na kterém úřadě si hotový OP chcete vyzvednout. Jednou z možností je i <a href="data/mv.html">ministerstvo vnitra</a>.<br>
+        Pokud se nejedná o Váš první OP, nemusíte s sebou nic brát. Žádost Vám vytiskne úředník a taktéž Vás vyfotí.</p>
+    
+    
+    <p id="30dnuId">O nový OP můžete zažádat na kterémkoli úřadu obce s rozšířenou působností (v Praze na úřadech jednotlivých městských částí). V rámci žádosti také můžete uvést, na kterém úřadě si hotový OP chcete vyzvednout.<br>
+        Pokud se nejedná o Váš první OP, nemusíte s sebou nic brát. Žádost Vám vytiskne úředník a taktéž Vás vyfotí.</p>
+        
+   
+</body>
+
+</html>

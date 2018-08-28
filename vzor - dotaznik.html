@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+    
+    <script>
+
+	// zobraz prislusnou sekci na zaklade vybraneho radio buttonu
+        function setupVisibility(radioValue) {
+            if (radioValue == "blbe") { // kdyz je vybrana hodnota blbe -> najdi a zobraz s id = "blbeId", dobreId shovej
+                $("#blbeId").show()
+                $("#dobreId").hide()
+            } else {
+                $("#blbeId").hide()
+                $("#dobreId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="pocity"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "pocity", proved nasledujici blok kodu
+
+                value = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility(value);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedValue = $('input:radio[name="pocity"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility(selectedValue);  // zobraz prislusnou defaultni sekci 
+
+        });
+
+        // zobraz prislusnou sekci na zaklade vybraneho radio buttonu
+        function setupVisibility2(radioValue) {
+            if (radioValue == "uteryNe") { // kdyz je vybrana hodnota uteryNe -> najdi a zobraz s id = "uteryNeId", uteryAnoId shovej
+                $("#uteryNeId").show()
+                $("#uteryAnoId").hide()
+            } else {
+                $("#uteryNeId").hide()
+                $("#uteryAnoId").show()
+            }
+        }
+
+        $(document).ready(function() {   // az se dokument nalouduje, spusti se tento blok 
+
+            $('input:radio[name="utery"]').on('change', function(e) {  // jestlize se zmeni hodnota nektereho radio buttonu se jmenem "utery", proved nasledujici blok kodu
+
+                value2 = e.currentTarget.value;  // ziskej hodnotu z vybraneho radioButonu
+
+                setupVisibility2(value2);  // zobraz prislusnou sekci
+
+            });
+
+            var selectedValue2 = $('input:radio[name="utery"]:checked').val();  // najdi defaultne oznaceny radioButton, vezmi jeho hodnotu
+            setupVisibility2(selectedValue2);  // zobraz prislusnou defaultni sekci 
+
+        });
+
+            
+
+    </script>
+</head>
+
+<body>
+<H1>Dotazník pro perzonalizované řešení životní události stěhování</H1>
+    Jak se mate?
+    <form action="">
+        <input type="radio" name="pocity" value="dobre" checked="checked">Dobře<br>
+        <input type="radio" name="pocity" value="blbe">Blbě<br>
+    </form>
+    <br>
+
+    
+    Je dneska úterý?
+    <form action="">
+        <input type="radio" name="utery" value="uteryAno" checked="checked">Ano<br>
+        <input type="radio" name="utery" value="uteryNe">Ne<br>
+    </form>
+    <H1>Perzonalizované řešení životní události stěhování</H1>
+
+    <p id="dobreId">Good section...</p>
+
+    <p id="blbeId">Bad section....</p>
+
+    <p id="uteryAnoId">Nemáte pravdu</p>
+
+    <p id="uteryNeId">Máte pravdu</p>
+</body>
+
+</html>

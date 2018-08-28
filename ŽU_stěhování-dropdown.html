@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+            .hide{
+                    display: none;
+                }
+    </style>
+
+    
+</head>
+
+<body>
+<H1>Životní událost změna trvalého pobytu</H1>
+<p>Stěhujete se do jiného města? Měníte tudíž místo trvalého pobytu? V následujícím průvodci se Vám pokusíme dodat nejdůležitější informace, co, kde a jak musíte nebo byste měli zařídit.
+Pokud je pro vás některá z následujících otázek relevantní, rozklikněte si její odpověď.</p>
+
+<div class="story">
+        <h3>Stěhujete se z ČR do zahraničí?</h3>
+        <p class="news hide"> 
+            Musíte na úřadu (ohlašovně) v místě trvalého pobytu, případně na zastupitelském úřadu <a href="data\tp.html">zrušit svůj trvalý pobyt v ČR</a> a do 15 dní <a href="data\odevzdat_op.html">odevzdat občanský průkaz</a> na úřadu, který jej vydal (obec s rozšířenou působností či městská část), nebo na matričním úřadu v místě trvalého pobytu.
+        </p>
+    </div>
+
+
+<div class="story">
+        <h3>Stěhujete se v rámci ČR?</h3>
+        <p class="news hide"> 
+            Musíte na úřadu (ohlašovně) v místě nového trvalého pobytu <a href="data\nahlaseni_tp.html">nahlásit změnu svého trvalého pobytu</a> a do 15 dní si zažádat o <a href="data\obcanka.html">nový občanský průkaz</a> na jakémkoli úřadu (obce s rozšířenou působností, městské části, případně přímo na <a href="data\mv.html">Ministerstvu vnitra</a> pokud byste potřebovali nový doklad už do druhého dne).
+        </p>
+    </div>
+
+
+<div class="story">
+        <h3>Vlastníte auto?</h3>
+        <p class="news hide"> 
+            Musíte do 10 dní <a href="data\rv.html">nahlásit změnu údajů do registru vozidel</a> na jakémkoliv úřadu s rozšířenou působností, zde Vám bude také vyměněn malý technický průkaz a změněny údaje ve velkém technickém průkazu.
+        </p>
+    </div>
+
+<div class="story">
+        <h3>Pobíráte nějaký důchod nebo jste OSVČ?</h3>
+        <p class="news hide"> 
+            Musíte nahlásit změnu trvalého pobytu ČSSZ. Pokud pobíráte důchod, můžete změnu nahlásit buď dopisem, e-mailem podepsaným uznávaným elektronickým podpisem nebo prostřednictvím datové schránky. Na <a href="https://www.cssz.cz/NR/rdonlyres/891121IIQ20154ee7agqbofbtmcvapbfcardmcrklkihsconp.pdf">webu ČSSZ</a> a na <a href="https://eportal.cssz.cz/web/portal/tiskopisy-zmvd">ePortálu ČSSZ</a> naleznete tiskopis nazvaný „Hlášení změny adresy nebo jména a příjmení“.
+        </p>
+    </div>
+
+<div class="story">
+        <h3>Čerpáte nějakou nepojistnou sociální dávku, dávku pěstounské péče či dávku v oblasti (ne)zaměstnanosti?</h3>
+        <p class="news hide"> 
+            Musíte do 8 dní nahlásit novou adresu na Úřad práce.
+        </p>
+    </div>
+
+<div class="story">
+        <h3>Máte psa?</h3>
+        <p class="news hide"> 
+            Zjistěte si, zda je ve Vaší nové obci povinnost platit poplatek za psa, kolik a jak a kde se případně tento poplatek platí. Každá obec má toto nastavené jinak.
+        </p>
+    </div>
+
+<h3>Dále musíte:</h3>
+<p>Do 30 dní musíte nahlásit svou novou adresu i Vaší pojišťovně. Některé pojišťovny vyžadují osobní vyřízení, někde postačí písemné oznámení, každá pojišťovna má vlastní pravidla.</p>
+
+<p>Do 15 dní musíte oznámit Vaší staré obci, že se stěhujete a že se tudíž odhlašujete od platby za komunální odpad. Zároveň na nové obci se musíte k platbě za komunální odpad přihlásit, pokud to za Vás neudělá Společenství vlastníků jednotek, se kterým je vhodné se na tom samozřejmě domluvit.</p>
+
+<h2>Následují další velice užitečné rady, co vše by si měl člověk zkontrolovat, zařídit a kam všude by případně měl nebo mohl nahlásit změnu trvalého pobytu.</h2>
+-	finanční instituce<br>
+-	parkovací karty (odhlásit x přihlásit)<br>
+-	lékař<br>
+-	SIPO<br>
+-	koncesionářské poplatky<br>
+-	vyplácení důchodu přes Českou poštu<br>
+-	přeposílání korespondence<br>
+-	doprava<br>
+-	knihovna<br>
+-	povinné ručení<br>
+-	zaměstnavatel<br>
+-	škola<br>
+-	dodavatelé elektřiny, plynu, vody<br>
+-	poskytovatelé telefonních služeb, internetového připojení a TV<br>
+-	věrnostní slevové kartičky, účty v e-shopech<br>
+-	<a href="data\dite.html">stěhování jednoho z rodičů s dítětem</a>
+
+<script>
+    stories = document.getElementsByClassName('story');
+    for (var i = 0; i < stories.length; i++) {              // for each story
+        stories[i].addEventListener("click", function () {  // add an onClick listener
+            news = this.getElementsByClassName('news');
+            for (var j = 0; j < news.length; j++) {         // for each news in story
+                news[j].classList.toggle('hide');           // toggle 'hide' on clicked
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

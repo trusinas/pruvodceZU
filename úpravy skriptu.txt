@@ -1,0 +1,6 @@
+﻿úprava skriptu:
+•	setupVisibility2 – číslování
+•	"utery – nahradit názvem otázky
+•	"#utery – nahradit názvem otázky
+•	value2 – číslování
+•	selectedValue2 - číslování
