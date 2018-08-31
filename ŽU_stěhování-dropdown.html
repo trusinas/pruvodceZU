@@ -4,9 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <style>
-            .hide{
+        .hide{
                     display: none;
                 }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 
     
@@ -48,7 +87,9 @@ Pokud je pro vás některá z následujících otázek relevantní, rozklikněte
     </div>
 
 <div class="story">
-        <h3>Čerpáte nějakou nepojistnou sociální dávku, dávku pěstounské péče či dávku v oblasti (ne)zaměstnanosti?</h3>
+        <h3>Čerpáte nějakou <a href="data/nep_davky.html">nepojistnou sociální dávku,</a> či <div class="tooltip">dávku v oblasti (ne)zaměstnanosti?
+    <span class="tooltiptext">podpora v nezaměstnanosti<br>podpora při rekvalifikaci</span>
+  </div></h3>
         <p class="news hide"> 
             Musíte do 8 dní nahlásit novou adresu na Úřad práce.
         </p>
